@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'yuweiguocn'//用户名
+    groupId = 'io.github.yuweiguocn'//包名
+    artifactId = 'custom-annotation-processor'//类库名
+    publishVersion = '1.3.0'//版本号
+    desc = 'custom annotation processor.'//描述
+    website = 'https://github.com/yuweiguocn/CustomAnnotation'//对应的github网址
+}
+
+dependencies {
+    compile 'com.google.auto.service:auto-service:1.0-rc2'
+    compile project(':annotation')
+}
